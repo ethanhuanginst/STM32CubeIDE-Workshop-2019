@@ -1,16 +1,3 @@
-# STM32CubeIDE 工作坊
-![](docs/imgs/ST14179_STM32CubeIDE.png)
-
-日期: 2019.05.22 (三)
-
-時間: 09:30 - 17:00
-
-地點: 台北市內湖區基湖路10巷50號2樓[[Google map]](https://goo.gl/maps/c8vGBHJDmh5RcEpR7)
-
-開發板: [32F746GDISCOVERY](https://www.st.com/en/evaluation-tools/32f746gdiscovery.html)
-
-
-
 ## 事前準備
 
 1. 由以下網址下載並安裝STM32CubeIDE：
