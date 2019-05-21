@@ -103,3 +103,7 @@
 ## Some More Features Worth Trying
 
 1. MCU Post build outputs: HEX/BIN
+2. Editor: Auto-complete
+3. Editor: Macro expansion
+4. Editor: Code navigation
+
