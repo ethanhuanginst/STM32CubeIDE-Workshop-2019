@@ -109,11 +109,10 @@
    - Src\system_stm32f7xx_case1.c
    - Startup\startup_stm32f746nghx_case1.s
    - STM32F746NGHX_FLASH_case1.ld
-   ![](../../docs/imgs/hands-on/09_10.png)
-
    
-
-7. After building project, we get SysTick_Handler is in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
+   
+   
+7. After building project, SysTick_Handler is in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
    ![](../../docs/imgs/hands-on/09_11_BuildAnalyzer_case1.png)
 
 8. After starting debug session, set a breakpoint in SysTick_Handler() and then press "RESUME" button and then code stops at the breakpoint:
@@ -192,7 +191,7 @@
    
 
    
-7. After building project, we get SysTick_Handler and 2nd vector table (g_pfnVectors_itcm) are placed in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
+7. After building project, SysTick_Handler and 2nd vector table (g_pfnVectors_itcm) are placed in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
    ![](../../docs/imgs/hands-on/09_21_BuildAnalyzer_case2.png)
    
    
@@ -216,7 +215,7 @@
      ```CQL
      void SysTick_Handler(void)
      {
-     ...
+       ...
      }
      ```
 
@@ -276,7 +275,7 @@
          {
            . = ALIGN(4);
            _sitcmram = .;       /* create a global symbol at ccmram start */
-           *(.isr_vector_itcm)*/
+           *(.isr_vector_itcm)
            *stm32f7xx_it_case3.o (.text .text*)
            *(.itcmram)
        
@@ -307,7 +306,7 @@
 
    
 
-7. After building project, we get all interrupt handlers and 2nd vector table (g_pfnVectors_itcm) are placed in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
+7. After building project, all interrupt handlers and 2nd vector table (g_pfnVectors_itcm) are placed in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
    ![](C:/MyDocuments/00_MMS/00_STM32/Training/20190530_External_STM32CubeIDE/STM32CubeIDE-Workshop-2019/docs/imgs/hands-on/09_31_BuildAnalyzer_case3.png)
 
    

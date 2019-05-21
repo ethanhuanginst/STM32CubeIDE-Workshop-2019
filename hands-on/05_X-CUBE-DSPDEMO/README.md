@@ -1,6 +1,6 @@
 # Hands-on: X-CUBE-DSPDEMO
 
-1. Build
+1. Import this reference project into STM32CubeIDE and then "Build Project".
 
 2. Run/Debug to see how this demo works.
 
@@ -44,10 +44,14 @@ void FIR_PROCESSING_F32Process(void)
      }
    }
    ```
-
+   
+   
+   
 5. Define TEST_SWV in as shown below and then build project:
 
    ![](../../docs/imgs/hands-on/x-cube-dspdemo_define_TEST_SWV.png)
+   
+   
    
 6. Setup "Debug Configuration"
 
@@ -55,33 +59,48 @@ void FIR_PROCESSING_F32Process(void)
      
      ![](../../docs/imgs/hands-on/x-cube-dspdemo_debug_configurations.png)
      
-   * Go to "Debugger" tab, check "Enable" and then set Core Clock 200MHz as shown below:
      
-     ![](../../docs/imgs/hands-on/x-cube-dspdemo_debug_configurations_swv.png)
+     
+   * Go to "Debugger" tab, check "Enable" and then set Core Clock 200MHz as shown below:
+![](../../docs/imgs/hands-on/x-cube-dspdemo_debug_configurations_swv.png)
      
 
    
 
-7. Run Debug again and do not press "Resume" yet.
+7. Run Debug again and do not press "Resume" button yet.
 
 8. Setup SWV Data Trace Timeline Graph
 
    * Select "Window --> Show View --> SWV --> SWV Data Trace Timeline Graph" to Enable SWV Data Trace Timeline Graph view as shown below
 
      ![](../../docs/imgs/hands-on/x-cube-dspdemo_swv_data_trace_timeline_graph.png)
-
+   
+   
+   
    * Press "Configure Trace " button as shown below:
      ![](../../docs/imgs/hands-on/x-cube-dspdemo_swv_data_trace_timeline_graph_config.png)
-
+   
+   
+   
    * Add "swv_aFIR_F32_1kHz_15kHz" and "swv_aFIR_F32_Output" in Var/Addr of Comparator 0 and 1 as shown below:
      ![](../../docs/imgs/hands-on/x-cube-dspdemo_swv_data_trace_timeline_graph_add_var.png)
-
+   
+   
+   
    * Press "Start Trace" button as shown below:
      ![](../../docs/imgs/hands-on/x-cube-dspdemo_swv_data_trace_timeline_graph_start-trace.png)
-
+   
+   
+   
 9. Press "Resume" button and you will see waveform in SWV Data Trace Timeline Graph aligned with that in LCD:
    ![](../../docs/imgs/hands-on/x-cube-dspdemo_swv_data_trace_timeline_graph_resume.png)
    
 
    ![](../../docs/imgs/hands-on/x-cube-dspdemo_swv_data_trace_timeline_graph_waveform.png)
 
+## Some More Features Worth Trying
+
+1. SWV: Trace Log / SWV: ITM Timeline Graph
+2. SWV: Exception Trace Log
+3. SWV: Statistical Profiling
+4. Dynamic printf

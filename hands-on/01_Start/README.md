@@ -41,19 +41,21 @@
    
 4. In IOC editor, please search for PI1 pin and set it to GPIO_Output
    ![](../../docs/imgs/hands-on/01-013_PI1.png)
-
+   
+   
+   
 5. Add the following code to toggle LED LD1 (controlled by PI1) inside USER CODE Block 3 inside main()
    
-```c
-       /* USER CODE BEGIN 3 */
-       HAL_Delay(500);
-       HAL_GPIO_TogglePin(GPIOI, GPIO_PIN_1);
-     }
-     /* USER CODE END 3 */
-```
-
+   ```c
+          /* USER CODE BEGIN 3 */
+          HAL_Delay(500);
+          HAL_GPIO_TogglePin(GPIOI, GPIO_PIN_1);
+        }
+        /* USER CODE END 3 */
+   ```
    
-
+   
+   
 6. Press the following button to generate code:
    ![](../../docs/imgs/hands-on/01-014_GenerateCode.png)
    
@@ -75,8 +77,29 @@
 
    * Press "Switch" button and suggest to check "Remember my decision":
      ![](../../docs/imgs/hands-on/01-032_SwitchToDebugPerspective.png)
-   
-   
+     
+   * The following error may appear when ST-LINK FW of your board is not new enough. If this occurs, 
+     ![](../../docs/imgs/hands-on/01-033_st-link-error.png)
+     
+      1. If the error occurs, please press "OK" button in the picture above, and then press "OK" button in the picture below:
+     ![](../../docs/imgs/hands-on/01-034_st-link-error.png)
+       2. Press "Open in update mode" button in the picture below:
+         ![](../../docs/imgs/hands-on/01-035_st-link-upgrade.png)
+       3. Press "Update" button in the picture below:
+         ![](../../docs/imgs/hands-on/01-036_st-link-upgrade.png)
+       4. ST-LINK upgrade starts after pressing "Update" button:
+         ![](../../docs/imgs/hands-on/01-037_st-link-upgrade.png)
+       5. ST-LINK upgrade completes.
+         ![](../../docs/imgs/hands-on/01-038_st-link-upgrade.png)
+     
+     
    
 9. After switching to debug perspective, press "Resume" button to run your code:
    ![](../../docs/imgs/hands-on/01-041_RunDebug.png)
+
+
+
+## Some More Features Worth Trying
+
+1. MCU Post build outputs: HEX/BIN
+2. 
