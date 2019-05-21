@@ -25,3 +25,4 @@ Development Board: [32F746GDISCOVERY](https://www.st.com/en/evaluation-tools/32f
 6. [Generating CRC Checksum](hands-on/06_F746-DISCO-CRC/README.md)
 7. [Running ISR in ICTM](hands-on/07_ISR_in_ICTM/README.md)
 8. [Using External Loader](hands-on/08_QSPI_PreInitConfig/README.md)
+9. [BOOT+APP](hands-on/09_BOOT-APP/README.md)

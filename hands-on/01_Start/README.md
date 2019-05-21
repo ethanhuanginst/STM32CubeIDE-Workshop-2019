@@ -7,9 +7,9 @@
 ![](../../docs/imgs/hands-on/01-001.png)
    
    Suggest to select "NO" for the following override setting for file association for **.cproject** file if you have some other Eclipse-base IDE installed in your system:
-   ![](../../docs/imgs/hands-on/01-002.png)
+![](../../docs/imgs/hands-on/01-002.png)
    Suggest to select "NO" for the following override setting for file association for **.project** file if you have some other Eclipse-base IDE installed in your system:
-   ![](../../docs/imgs/hands-on/01-003.png)
+![](../../docs/imgs/hands-on/01-003.png)
    
    
    
@@ -26,16 +26,16 @@
    ![](../../docs/imgs/hands-on/01-007.png)
 
    Press "NO" for the following dialog:
-   ![](../../docs/imgs/hands-on/01-008.png)
+![](../../docs/imgs/hands-on/01-008.png)
 
    Press "YES" for the following dialog and suggest to check "Remember my decision":
-   ![](../../docs/imgs/hands-on/01-009.png)
+![](../../docs/imgs/hands-on/01-009.png)
 
    The initialization may take some time:
-   ![](../../docs/imgs/hands-on/01-010.png)
+![](../../docs/imgs/hands-on/01-010.png)
 
    The Project Creation may also take some time:
-   ![](../../docs/imgs/hands-on/01-011.png)
+![](../../docs/imgs/hands-on/01-011.png)
    
    
    
@@ -84,13 +84,13 @@
       1. If the error occurs, please press "OK" button in the picture above, and then press "OK" button in the picture below:
      ![](../../docs/imgs/hands-on/01-034_st-link-error.png)
        2. Press "Open in update mode" button in the picture below:
-         ![](../../docs/imgs/hands-on/01-035_st-link-upgrade.png)
+![](../../docs/imgs/hands-on/01-035_st-link-upgrade.png)
        3. Press "Update" button in the picture below:
-         ![](../../docs/imgs/hands-on/01-036_st-link-upgrade.png)
+![](../../docs/imgs/hands-on/01-036_st-link-upgrade.png)
        4. ST-LINK upgrade starts after pressing "Update" button:
-         ![](../../docs/imgs/hands-on/01-037_st-link-upgrade.png)
+![](../../docs/imgs/hands-on/01-037_st-link-upgrade.png)
        5. ST-LINK upgrade completes.
-         ![](../../docs/imgs/hands-on/01-038_st-link-upgrade.png)
+![](../../docs/imgs/hands-on/01-038_st-link-upgrade.png)
      
      
    

@@ -29,17 +29,23 @@
 4. Enable linker flag -u _printf_float
 
    * Right click on project folder and select "Properties":
-     ![](../../docs/imgs/hands-on/04_050.png)
+   ![](../../docs/imgs/hands-on/04_050.png)
    * Go to "MCU GCC Linker --> Miscellaneous" to enable the flag:
-     ![](../../docs/imgs/hands-on/04_051.png)
+   ![](../../docs/imgs/hands-on/04_051.png)
    * Type "-u _printf_float" in the dialog and then press "OK":
-     ![](../../docs/imgs/hands-on/04_052_set-linker-flag.png)
+   ![](../../docs/imgs/hands-on/04_052_set-linker-flag.png)
    * After setting the flag, the warning disappears.
+
+   
 
 5. Let's run "Build Project" --> "Debug As --> 2 STM32 C/C++ Application" to run the code again and you will see the result is a bit better (at least a floating number is printed out) but still wrong while in the meantime LD1 toggling is working well.
    ![](../../docs/imgs/hands-on/04_053_2nd-run.png)
-
+   
+   
+   
 6. Open "STM32F746NGHX_FLASH.ld" in project folder and change _estack from 0x2004ffff to 0x20050000. 
+
+   
 
 7. Let's run "Build Project" --> "Debug As --> 2 STM32 C/C++ Application" to run the code again and finally get the expected result:
    ![](../../docs/imgs/hands-on/04_060_3rd-run.png)

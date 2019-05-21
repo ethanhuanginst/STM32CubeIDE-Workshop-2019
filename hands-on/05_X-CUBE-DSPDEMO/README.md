@@ -10,7 +10,7 @@
 #ifdef TEST_SWV
    float32_t swv_aFIR_F32_1kHz_15kHz = 0.0f;
    float32_t swv_aFIR_F32_Output = 0.0f;
-   #endif```
+   #endif
    ```
    
 4. Modify the code below (enclosed by #ifdef TEST_SWV, #else and #endif) inside FIR_PROCESSING_F32Process() definition in fir_processing.c under Src\:

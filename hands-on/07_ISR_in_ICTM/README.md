@@ -5,37 +5,36 @@
 * According to Reference Manual of STM746, we can put execution code into ITCM RAM (16MB): 
    ![](../../docs/imgs/hands-on/09_00.png)
 
-* The following cases will be covered in this hands-on:
+* The following cases will be covered in this hands-on by three different "**Build Configurations**":
    1. Single ISR in ITCM
    
    2. Single ISR along with vector table in ITCM
 
    3. All ISRs in stm32f7xx_it along with vector table in ITCM
    
-* Three cases will be managed by three different "**Build Configurations**". 
-  
-     
+      
+   
 ### Case 1: Single ISR (SysTick_Handler) in ITCM
 
 1. Add new build configuration for case 1:
 
    * Right click on project icon and then select "Build Configurations --> Manage":
-   ![](../../docs/imgs/hands-on/09_01_SetupBuildConfigurations.png)
+![](../../docs/imgs/hands-on/09_01_SetupBuildConfigurations.png)
    
    
    
    * Press "New..." button:
-     ![](../../docs/imgs/hands-on/09_02.png)
+![](../../docs/imgs/hands-on/09_02.png)
      
      
      
    * Type in "case 1" in Name and then press "OK" button:
-     ![](../../docs/imgs/hands-on/09_03.png)
+![](../../docs/imgs/hands-on/09_03.png)
      
      
      
    * Select case 1 and then press "Set Active" button:
-     ![](../../docs/imgs/hands-on/09_04.png)
+![](../../docs/imgs/hands-on/09_04.png)
      
      
      
@@ -65,9 +64,9 @@
    * Exclude original **startup_stm32f746nghx.s**:
 
       * Right clock on startup_stm32f746nghx.s and then select "Properties":
-     ![](../../docs/imgs/hands-on/09_06.png)
+![](../../docs/imgs/hands-on/09_06.png)
       * Check "Exclude resource from build" as shown below:
-        ![](../../docs/imgs/hands-on/09_07.png)
+![](../../docs/imgs/hands-on/09_07.png)
    
    
    
@@ -96,10 +95,10 @@
    - Setup linker:
 
      - Right click on project icon and then select "Properties":   
-       ![](../../docs/imgs/hands-on/09_08.png)
+![](../../docs/imgs/hands-on/09_08.png)
 
      - Set correct name of linker script and then press "Apply and Close" button as shown below:
-       ![](../../docs/imgs/hands-on/09_09.png)
+![](../../docs/imgs/hands-on/09_09.png)
    
    
    
@@ -113,10 +112,10 @@
    
    
 7. After building project, SysTick_Handler is in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
-   ![](../../docs/imgs/hands-on/09_11_BuildAnalyzer_case1.png)
+![](../../docs/imgs/hands-on/09_11_BuildAnalyzer_case1.png)
 
 8. After starting debug session, set a breakpoint in SysTick_Handler() and then press "RESUME" button and then code stops at the breakpoint:
-    ![](../../docs/imgs/hands-on/09_12_StopAtBreakpoint_case1.png)
+![](../../docs/imgs/hands-on/09_12_StopAtBreakpoint_case1.png)
 
   
 
@@ -175,10 +174,10 @@
    - Setup linker:
 
      - Right click on project icon and then select "Properties":   
-       ![](../../docs/imgs/hands-on/09_08.png)
+![](../../docs/imgs/hands-on/09_08.png)
 
      - Set correct name of linker script and then press "Apply and Close" button as shown below:
-       ![](../../docs/imgs/hands-on/09_20_SetupLinker.png)
+![](../../docs/imgs/hands-on/09_20_SetupLinker.png)
    
    
    
@@ -192,12 +191,12 @@
 
    
 7. After building project, SysTick_Handler and 2nd vector table (g_pfnVectors_itcm) are placed in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
-   ![](../../docs/imgs/hands-on/09_21_BuildAnalyzer_case2.png)
+![](../../docs/imgs/hands-on/09_21_BuildAnalyzer_case2.png)
    
    
    
 8. After starting debug session, set a breakpoint in SysTick_Handler() and then press "RESUME" button and then code stops at the breakpoint:
-    ![](../../docs/imgs/hands-on/09_22_StopAtBreakpoint_case2.png)
+![](../../docs/imgs/hands-on/09_22_StopAtBreakpoint_case2.png)
    
    * SysTick_Handler is executed without error.
    * From "Memo View", 2nd vector table is placed correctly.
@@ -291,9 +290,9 @@
 
    - Setup linker:
      - Right click on project icon and then select "Properties":
-![](C:/MyDocuments/00_MMS/00_STM32/Training/20190530_External_STM32CubeIDE/STM32CubeIDE-Workshop-2019/docs/imgs/hands-on/09_08.png)
+![](../../docs/imgs/hands-on/09_08.png)
      - Set correct name of linker script and then press "Apply and Close" button as shown below:
-       ![](C:/MyDocuments/00_MMS/00_STM32/Training/20190530_External_STM32CubeIDE/STM32CubeIDE-Workshop-2019/docs/imgs/hands-on/09_20_SetupLinker.png)
+![](../../docs/imgs/hands-on/09_20_SetupLinker.png)
 
    
 
@@ -307,12 +306,12 @@
    
 
 7. After building project, all interrupt handlers and 2nd vector table (g_pfnVectors_itcm) are placed in section .itcmram which is located in ITCMRAM memory region by checking Build Analyzer as shown below:
-   ![](C:/MyDocuments/00_MMS/00_STM32/Training/20190530_External_STM32CubeIDE/STM32CubeIDE-Workshop-2019/docs/imgs/hands-on/09_31_BuildAnalyzer_case3.png)
+![](../../docs/imgs/hands-on/09_31_BuildAnalyzer_case3.png)
 
    
 
 8. After starting debug session, set a breakpoint in SysTick_Handler() and then press "RESUME" button and then code stops at the breakpoint:
-   ![](../../docs/imgs/hands-on/09_32_StopAtBreakpoint_case3.png)
+![](../../docs/imgs/hands-on/09_32_StopAtBreakpoint_case3.png)
    
    * _\_attribute\_\_((section())) is not used for all interrupt handlers.
    * SysTick_Handler() is executed correctly.
