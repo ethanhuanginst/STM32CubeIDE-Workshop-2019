@@ -174,7 +174,7 @@ The purpose of this hands-on is to demonstrate how to debug between BOOT.elf and
 ## Steps (Running Debug Session of BOOT.elf with Breakpoints in APP.elf)
 
 
-1. Open "Debug Configuration" of BOOT.elf and add the following scripts into "Run Commands" in Startup tab:
+1. Open "Debug Configuration" of BOOT.elf and add the following scripts into "Run Commands" in Startup tab:    
 
    ```c
    add-symbol-file ../09_F746-DISCO_APP/Debug/09_F746-DISCO_APP.elf 0x080081C8
@@ -189,18 +189,18 @@ The purpose of this hands-on is to demonstrate how to debug between BOOT.elf and
 
    **NOTE1**: the path of APP.elf used by add-symbol-file command needs to be modified based on the path used in your project.
 
-   **NOTE2**: the offset (0x080081C8) used by add-symbol-file command is the beginning address of section .text of APP. This value could be obtained by checking Build Analyzer as shown below:
+   **NOTE2**: the offset (0x080081C8) used by add-symbol-file command is the beginning address of section .text of APP. This value could be obtained by checking Build Analyzer as shown below:  
    ![](../../docs/imgs/hands-on/10_02_BOOT_Offset-APP.png)
 
    
 
 2. Press "Debug" button to start the debug session. 
 
-   1. Debug stops at the first breakpoint bl_main:
+   1. Debug stops at the first breakpoint bl_main:  
       ![](../../docs/imgs/hands-on/10_11_BOOT_bl_main.png)
-   2. Press "RESUME" button and then debug stops at the first breakpoint goto_APP:
+   2. Press "RESUME" button and then debug stops at the first breakpoint goto_APP:  
       ![](../../docs/imgs/hands-on/10_12_BOOT_gotoAPP.png)
-   3. Press blue user button of the board, press "RESUME" button and then debug stops at the 3rd breakpoint app_main:
+   3. Press blue user button of the board, press "RESUME" button and then debug stops at the 3rd breakpoint app_main:  
       ![](../../docs/imgs/hands-on/10_13_BOOT_app_main.png)
 
    
@@ -209,7 +209,7 @@ The purpose of this hands-on is to demonstrate how to debug between BOOT.elf and
 
 ## Steps (Running Debug Session of APP.elf with Breakpoints in BOOT.elf)
 
-1. Open "Debug Configuration" of APP.elf and add the following scripts into "Run Commands" in Startup tab:
+1. Open "Debug Configuration" of APP.elf and add the following scripts into "Run Commands" in Startup tab:  
 
    ```c
    add-symbol-file ../09_F746-DISCO_BOOT/Debug/09_F746-DISCO_BOOT.elf 0x080001C8
@@ -229,19 +229,19 @@ The purpose of this hands-on is to demonstrate how to debug between BOOT.elf and
 
    **NOTE1**: the path of BOOT.elf used by add-symbol-file command needs to be modified based on the path used in your project.
 
-   **NOTE2**: the offset (0x080001C8) used by add-symbol-file command is the beginning address of section .text of BOOT. This value could be obtained by checking Build Analyzer as shown below:
-   ![](../../docs/imgs/hands-on/10_22_APP_Offset-BOOT.png)
+   **NOTE2**: the offset (0x080001C8) used by add-symbol-file command is the beginning address of section .text of BOOT. This value could be obtained by checking Build Analyzer as shown below:  
+   ![](../../docs/imgs/hands-on/10_22_APP_Offset-BOOT.png)   
    **NOTE3**: PC/SP/VTOR need to be set by gdb commands to make debug start from BOOT.elf.
 
    
 
 2. Press "Debug" button to start the debug session. 
 
-   1. Debug stops at the first breakpoint bl_main:
+   1. Debug stops at the first breakpoint bl_main:  
       ![](../../docs/imgs/hands-on/10_31_APP_bl_main.png)
-   2. Press "RESUME" button and then debug stops at the first breakpoint goto_APP:
+   2. Press "RESUME" button and then debug stops at the first breakpoint goto_APP:  
       ![](../../docs/imgs/hands-on/10_32_APP_gotoAPP.png)
-   3. Press blue user button of the board, press "RESUME" button and then debug stops at the 3rd breakpoint app_main:
+   3. Press blue user button of the board, press "RESUME" button and then debug stops at the 3rd breakpoint app_main:  
       ![](../../docs/imgs/hands-on/10_33_APP_app_main.png)
 
    

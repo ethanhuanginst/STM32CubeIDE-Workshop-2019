@@ -24,45 +24,45 @@ Now, let's see how to use STM32CubeIDE to build and debug such Makefile-base pro
 
 1. Start a new STM32 project
    
-   * Select "Help -->Information Center":
+   * Select "Help -->Information Center":  
      ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-0.png)
    
      
    
    * Press "Start new STM32 project":
      ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-1.png)
-   * Select "32F746DISCOVERY" board from "Board Selector" and press "Next" button:
+   * Select "32F746DISCOVERY" board from "Board Selector" and press "Next" button:  
      ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-2.png)
-   * Assign "Project Name" and "Location", and make sure "Targeted Project Type" is "Empty". Press "Finish" button when all is set.
+   * Assign "Project Name" and "Location", and make sure "Targeted Project Type" is "Empty". Press "Finish" button when all is set.  
      ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-3.png)
    
 5. Prepare for compiling   
-   * Delete all folders and files:
+   * Delete all folders and files:  
 ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-5.png)
-   * Drag all "stm32_hp141_lcd" file (except out.elf) and folders into "stm32_hp141_lcd" in Project Exploere of STM32CubeIDE:
+   * Drag all "stm32_hp141_lcd" file (except out.elf) and folders into "stm32_hp141_lcd" in Project Exploere of STM32CubeIDE:  
      ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-6.png)
    * Select "Copy files and folders" and then press "OK":
 ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-7.png)
    
 8. Compile the code
    
-   * Select "Properties":
+   * Select "Properties":  
 ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-9.png)
    
-   * Modify "Builder Settings" (uncheck "Generate Makefiles automatically" and delete string "Debug" in Build directory) as shown below :
+   * Modify "Builder Settings" (uncheck "Generate Makefiles automatically" and delete string "Debug" in Build directory) as shown below:  
 ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-10.png)
      
-   * Select "Build Project":
+   * Select "Build Project":  
 ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-8.png)
      
      
 
 11. Start debug
 
-    * Select "Debug As --> STM32 MCU C/C++ Application"
+    * Select "Debug As --> STM32 MCU C/C++ Application"  
     ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-11.png)
-    * Press "OK" button in "Edit Configuration":
+    * Press "OK" button in "Edit Configuration":  
     ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-13.png)
-    * Press "Resume" button to run the code:
+    * Press "Resume" button to run the code:  
     ![](../../docs/imgs/hands-on/stm32_hp141_lcd-start-new-project-12.png)
 

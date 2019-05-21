@@ -12,33 +12,37 @@
    
 2. "Build Project" --> "Debug As --> 2 STM32 C/C++ Application" to enter Debug Perspective. 
    
-   * Open UART console as shown below:
+   * Open UART console as shown below:  
      ![](../../docs/imgs/hands-on/04_040_Connect_to_Console.png)
-   * Here is the result after pressing "Resume" button. As you can see, the floating number is not printed out as expected.
+   * Here is the result after pressing "Resume" button. As you can see, the floating number is not printed out as expected.  
      ![](../../docs/imgs/hands-on/04_041_first_run.png)
    
 
 
 
-3. Go back to the code added in step 1, there is a warning bug icon in front of the code and tells us to enable linker flag -u _printf_float:
+3. Go back to the code added in step 1, there is a warning bug icon in front of the code and tells us to enable linker flag -u _printf_float:   
+![](../../docs/imgs/hands-on/04_042_warning_for_linker_flags.png)
+   
+   
+   
+4. Enable linker flag **-u _printf_float**:   
 
-   ![](../../docs/imgs/hands-on/04_042_warning_for_linker_flags.png)
+   * Right click on project folder and select "Properties":  
+     ![](../../docs/imgs/hands-on/04_050.png)
    
    
+   * Go to "MCU GCC Linker --> Miscellaneous" to enable the flag:  
+     ![](../../docs/imgs/hands-on/04_051.png)
    
-4. Enable linker flag -u _printf_float
-
-   * Right click on project folder and select "Properties":
-   ![](../../docs/imgs/hands-on/04_050.png)
-   * Go to "MCU GCC Linker --> Miscellaneous" to enable the flag:
-   ![](../../docs/imgs/hands-on/04_051.png)
-   * Type "-u _printf_float" in the dialog and then press "OK":
-   ![](../../docs/imgs/hands-on/04_052_set-linker-flag.png)
+   
+   * Type "-u _printf_float" in the dialog and then press "OK":  
+     ![](../../docs/imgs/hands-on/04_052_set-linker-flag.png)
+     
    * After setting the flag, the warning disappears.
-
    
 
-5. Let's run "Build Project" --> "Debug As --> 2 STM32 C/C++ Application" to run the code again and you will see the result is a bit better (at least a floating number is printed out) but still wrong while in the meantime LD1 toggling is working well.
+   
+5. Let's run "Build Project" --> "Debug As --> 2 STM32 C/C++ Application" to run the code again and you will see the result is a bit better (at least a floating number is printed out) but still wrong while in the meantime LD1 toggling is working well.  
    ![](../../docs/imgs/hands-on/04_053_2nd-run.png)
    
    
@@ -47,7 +51,7 @@
 
    
 
-7. Let's run "Build Project" --> "Debug As --> 2 STM32 C/C++ Application" to run the code again and finally get the expected result:
+7. Let's run "Build Project" --> "Debug As --> 2 STM32 C/C++ Application" to run the code again and finally get the expected result:  
    ![](../../docs/imgs/hands-on/04_060_3rd-run.png)
 
 
