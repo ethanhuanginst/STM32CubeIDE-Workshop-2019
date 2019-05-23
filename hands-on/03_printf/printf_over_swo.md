@@ -23,7 +23,11 @@
    ![](../../docs/imgs/hands-on/04_071_enable_swv.png)          
    
    * Check "Enable" in SWV portion.
-   * Set Core Clock 16MHz
+   
+   * Set Core Clock 16MHz which needs to be aligned with the setting of CLK Cortex clock in Clock Configuration of IOC editor:  
+     ![](../../docs/imgs/hands-on/04_074_swv-core-clock.png)
+   
+     
    
    
    

@@ -31,13 +31,14 @@
      
      ```c
      /* USER CODE BEGIN 4 */
-    int div(int lho, int rho)
+     int div(int lho, int rho)
      {
        return lho/rho;
      }
      /* USER CODE END 4 */
      ```
-
+    
+     
    
 
 
